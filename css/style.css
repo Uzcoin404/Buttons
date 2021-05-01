@@ -1,0 +1,266 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Freckle Face', cursive;
+    text-decoration: none;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #111;
+}
+.buttons{
+    grid-gap: 50px;
+    display: flex;
+    align-items: center;
+}
+
+/* Neon Button styling */
+
+.neon{
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 20px;
+    color: #008cff;
+    letter-spacing: 3px;
+    text-decoration: none;
+    overflow: hidden;
+    transition: all 0.25s;
+}
+.neon:hover{
+    color: #296396;
+    background-color: #008cff;
+    box-shadow: 0 0 10px #008cff, 0 0 40px #008cff, 0 0 80px #008cff;
+    transition-delay: 1s;
+}
+
+.neon span{
+    position: absolute;
+    display: block;
+}
+.neon span:nth-child(1){
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg,transparent,#008cff);
+}
+.neon:hover span:nth-child(1){
+    left: 100%;
+    transition: 1s;
+}
+
+.neon span:nth-child(3){
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg,transparent,#008cff);
+}
+.neon:hover span:nth-child(3){
+    right: 100%;
+    transition: 1s;
+    transition-delay: 0.5s;
+}
+
+.neon span:nth-child(2){
+    top: -100%;
+    right: 0%;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg,transparent,#008cff);
+}
+.neon:hover span:nth-child(2){
+    top: 100%;
+    transition: 1s;
+    transition-delay: 0.25s;
+}
+
+.neon span:nth-child(4){
+    bottom: -100%;
+    left: 0%;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg,transparent,#008cff);
+}
+.neon:hover span:nth-child(4){
+    bottom: 100%;
+    transition: 1s;
+    transition-delay: 0.75s;
+}
+
+/* Water Button styling */
+
+/* .water__blog{
+    display: none;
+}
+.water__blog.show{
+    display: block;
+} */
+
+.water{
+    display: inline-block;
+    border: 2px solid #008cff;
+    background: none;
+    font-size: 20px;
+    padding: 15px 30px;
+    color: #008cff;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: color 1s;
+    position: relative;
+    overflow: hidden;
+}
+
+.water:hover{
+    color: #fff;
+}
+.water::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background: #008cff;
+    z-index: -1;
+    transition: all 1s;
+    border-radius: 50% 50% 0 0;
+}
+.water:hover::before{
+    height: 190%;
+}
+
+/* Button styling */
+
+.button{
+    display: inline-block;  
+    font-size: 20px;
+    padding: 15px 30px;
+    letter-spacing: 3px;
+    color: #008cff;
+    position: relative;
+    background: #130046;
+    overflow: hidden;
+}
+.button::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 50%;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.button span:nth-child(1){
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, #130046, #008cff);
+    animation: animate1 2s linear infinite;
+    animation-delay: 1s;
+}
+@keyframes animate1{
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(100%);
+    }
+}
+
+.button span:nth-child(2){
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(to bottom, #130046, #008cff);
+    animation: animate2 2s linear infinite;
+}
+@keyframes animate2{
+    0%{
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translateY(100%);
+    }
+}
+
+.button span:nth-child(3){
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to left, #130046, #008cff);
+    animation: animate3 2s linear infinite;
+    animation-delay: 1s;
+}
+@keyframes animate3{
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
+
+.button span:nth-child(4){
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(to top, #130046, #008cff);
+    animation: animate4 2s linear infinite;
+}
+@keyframes animate4{
+    0%{
+        transform: translateY(100%);
+    }
+    100%{
+        transform: translateY(-100%);
+    }
+}
+
+/* Pixels button styling */
+
+.pixel{
+    padding: 15px 30px;
+    font-size: 20px;
+    color: #ec0b36;
+    letter-spacing: 3px;
+    transition: 0.5s;
+}
+.pixel:hover{
+    background: #ec0b36 url(/img/pixel.png);
+    background-size: 209px;
+    color: #fff;
+    transition-delay: 1s;
+    animation: animate 1s steps(8) forwards;
+}
+
+@keyframes animate {
+    0%{
+        background-position-y: 0;
+    }
+    100%{
+        background-position-y: -400px;
+    }
+}
+
+
+@media(max-width: 992px){
+    .buttons{
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0 15px;
+    }
+}
