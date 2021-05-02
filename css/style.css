@@ -254,7 +254,7 @@ body{
     transition: 0.5s;
 }
 .pixel:hover{
-    background: #ec0b36 url(/img/pixel.png);
+    background: #ec0b36 url(/LearnJS/img/pixel.png);
     background-size: 209px;
     color: #fff;
     transition-delay: 1s;
