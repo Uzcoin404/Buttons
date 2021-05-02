@@ -94,12 +94,12 @@ body{
 
 /* Water Button styling */
 
-/* .water__blog{
+.water__blog{
     display: none;
 }
 .water__blog.show{
     display: block;
-} */
+}
 
 .water{
     display: inline-block;
@@ -135,6 +135,13 @@ body{
 }
 
 /* Button styling */
+
+.button__blog{
+    display: none;
+}
+.button__blog.show{
+    display: block;
+}
 
 .button{
     display: inline-block;  
@@ -232,6 +239,13 @@ body{
 
 /* Pixels button styling */
 
+.pixel__blog{
+    display: none;
+}
+.pixel__blog.show{
+    display: block;
+}
+
 .pixel{
     padding: 15px 30px;
     font-size: 20px;
@@ -240,7 +254,7 @@ body{
     transition: 0.5s;
 }
 .pixel:hover{
-    background: #ec0b36 url(/LearnJS/img/pixel.png);
+    background: #ec0b36 url(/img/pixel.png);
     background-size: 209px;
     color: #fff;
     transition-delay: 1s;
