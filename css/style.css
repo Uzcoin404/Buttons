@@ -9,7 +9,7 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: url(/LearnJS/img/4844484.jpg) no-repeat center / cover;
+    background: url(/Buttons/img/4844484.jpg) no-repeat center / cover;
 }
 .buttons{
     grid-gap: 50px;
